@@ -7,6 +7,7 @@ use crate::new::create_new_resource;
 mod dev;
 mod elasticsearch;
 mod init;
+mod model;
 mod new;
 mod util;
 
@@ -32,9 +33,7 @@ struct InitCommandArgs {}
 struct DevCommandArgs {}
 
 #[derive(Parser, Debug)]
-struct NewCommandArgs {
-
-}
+struct NewCommandArgs {}
 
 #[derive(Debug)]
 enum NewResource {

@@ -1329,6 +1329,8 @@ dependencies = [
  "clap",
  "elasticsearch",
  "notify",
+ "serde",
+ "serde_json",
  "tokio",
 ]
 
