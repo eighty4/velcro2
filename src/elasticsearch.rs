@@ -3,9 +3,9 @@ use std::env;
 use anyhow::{anyhow, Result};
 use elasticsearch::auth::Credentials;
 use elasticsearch::cert::CertificateValidation;
-use elasticsearch::Elasticsearch;
 use elasticsearch::http::transport::{SingleNodeConnectionPool, TransportBuilder};
 use elasticsearch::http::Url;
+use elasticsearch::Elasticsearch;
 
 pub fn es_client() -> Result<Elasticsearch> {
     let host = env::var("ELASTICSEARCH_HOST").unwrap_or("127.0.0.1".to_string());

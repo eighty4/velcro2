@@ -35,6 +35,7 @@ struct DevCommandArgs {}
 #[derive(Parser, Debug)]
 struct NewCommandArgs {}
 
+#[allow(dead_code)]
 #[derive(Debug)]
 enum NewResource {
     Mapping(String),
