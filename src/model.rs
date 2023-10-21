@@ -3,7 +3,7 @@ use std::collections::HashMap;
 use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize, Serialize)]
-struct Index {
+pub struct Index {
     #[serde(rename = "mappings", default)]
     mapping: Mapping,
 }

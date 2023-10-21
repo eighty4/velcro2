@@ -3,12 +3,14 @@ use clap::{Parser, Subcommand};
 use crate::dev::start_dev_mode;
 use crate::init::init_project;
 use crate::new::create_new_resource;
+use crate::strap::velcro_strap;
 
 mod dev;
 mod elasticsearch;
 mod init;
 mod model;
 mod new;
+mod strap;
 mod util;
 
 #[derive(Parser)]
@@ -52,6 +54,6 @@ async fn main() {
         VelcroCommand::Init(_) => init_project(),
         VelcroCommand::Dev(_) => start_dev_mode(),
         VelcroCommand::New(_) => create_new_resource(),
-        VelcroCommand::Strap(_) => println!("strap"),
+        VelcroCommand::Strap(_) => velcro_strap(),
     }
 }
